@@ -2,7 +2,7 @@ version: 1.2
 
 service:
   subclass: DOCKER_COMPOSE
-  name: Jupyter
+  name: Jupyterlab
 
   authors:
     - name: David Steinberg
@@ -12,6 +12,7 @@ service:
   files:
     - docker-compose.yml
     - configure_environment.sh
+    - hello.ipynb
   scripts:
     start: docker-compose up
     postprovision:
