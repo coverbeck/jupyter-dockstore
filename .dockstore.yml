@@ -1,0 +1,19 @@
+version: 1.2
+
+service:
+  subclass: DOCKER_COMPOSE
+  name: Jupyter
+
+  authors:
+    - name: David Steinberg
+  description: Runs a local jupyter service for interactive notebooks at port 8888
+  publish: true
+
+  # These are files the Dockstore will index. They will be directly downloadable from Dockstore. Wildcards are not supported.
+  files:
+    - docker-compose.yml
+  scripts:
+    start: docker-compose up
+    postprovision:
+    port:
+    stop: docker-compose down
