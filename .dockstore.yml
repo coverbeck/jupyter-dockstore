@@ -9,9 +9,9 @@ service:
   description: Runs a local jupyter service for interactive notebooks at port 8888
   publish: true
 
-  # These are files the Dockstore will index. They will be directly downloadable from Dockstore. Wildcards are not supported.
   files:
     - docker-compose.yml
+    - configure_environment.sh
   scripts:
     start: docker-compose up
     postprovision:
