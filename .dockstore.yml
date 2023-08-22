@@ -1,7 +1,7 @@
 # A Dockstore service entrypoint to a simple jupyter environment..
 version: 1.1
 service:
-  subclass: DOCKER_COMPOSE
+  type: DOCKER_COMPOSE
   name: Jupyterlab
 
   authors:
